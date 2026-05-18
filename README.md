@@ -2,7 +2,11 @@
 
 Next.js app for capturing family stories (Supabase auth + storage, optional OpenAI interview).
 
-**Repo:** [tong0701/510_finalproject_Origin](https://github.com/tong0701/510_finalproject_Origin) · deploy branch `510_Origin_deploy`
+**Live:** https://510-finalproject-origin.vercel.app/
+
+**Deploy repo:** [tong0701/510_finalproject_Origin](https://github.com/tong0701/510_finalproject_Origin) · branch `510_Origin_deploy`
+
+**Course repo:** [danzelphotos-tech/final-project-codebase-danzelphotos-tech](https://github.com/danzelphotos-tech/final-project-codebase-danzelphotos-tech/tree/dev) · folder **`gate2-3/`**
 
 ## Local
 
