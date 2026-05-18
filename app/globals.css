@@ -1,0 +1,249 @@
+@import "tailwindcss";
+
+/* Origins Design System v1 — aligned with Origins Design System-print.html / styles.jsx */
+:root {
+  --origins-paper: #fbf6ec;
+  --origins-paper-deep: #f5ebda;
+  --origins-edge: #eadfc9;
+  --origins-ink: #3a2a1f;
+  --origins-ink-soft: #6b4a35;
+  --origins-ink-muted: #9c8270;
+  --origins-ember: #c97b4f;
+  --origins-ember-deep: #a85f35;
+  --origins-ember-soft: #e8c4a8;
+  --origins-sage: #7a8b6f;
+  --origins-rose: #b85c5c;
+  --origins-gold: #d4a574;
+  --background: var(--origins-paper);
+  --foreground: var(--origins-ink);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: var(--font-lora), Georgia, serif;
+  --font-serif: var(--font-lora), Georgia, serif;
+  --font-mono: var(--font-jetbrains-mono), "Courier Prime", monospace;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--origins-ember-soft);
+}
+
+.font-display {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 1.1;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 1.1;
+}
+
+.ai-question {
+  font-family: var(--font-mono);
+  color: var(--origins-ink-soft);
+  font-size: 0.8125rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.muted {
+  color: var(--origins-ink-muted);
+}
+
+.soft {
+  color: var(--origins-ink-soft);
+}
+
+.rule {
+  height: 1px;
+  background: var(--origins-edge);
+  border: 0;
+  margin: 0;
+}
+
+.card {
+  background: var(--origins-paper);
+  border: 1px solid var(--origins-edge);
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(58, 42, 31, 0.04);
+}
+
+.photo {
+  background: #fff;
+  padding: 8px 8px 12px;
+  box-shadow:
+    0 2px 4px rgba(58, 42, 31, 0.08),
+    0 8px 24px rgba(58, 42, 31, 0.06);
+  display: inline-block;
+  border-radius: 1px;
+}
+
+.photo-inner {
+  background: var(--origins-paper-deep);
+  display: block;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent 0 6px,
+    rgba(58, 42, 31, 0.04) 6px 7px
+  );
+}
+
+.photo-rotate-1 {
+  transform: rotate(-1deg);
+}
+.photo-rotate-2 {
+  transform: rotate(1.2deg);
+}
+.photo-rotate-3 {
+  transform: rotate(-0.8deg);
+}
+
+.label {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--origins-ink-soft);
+  margin-bottom: 6px;
+  letter-spacing: 0.01em;
+}
+
+.field-input {
+  @apply block w-full text-[0.9375rem] outline-none transition-[border-color,box-shadow] placeholder:text-[var(--origins-ink-muted)];
+  font-family: var(--font-sans);
+  padding: 0.7em 0.85em;
+  border-radius: 6px;
+  border: 1px solid var(--origins-edge);
+  background-color: var(--origins-paper);
+  color: var(--origins-ink);
+}
+
+.field-input:focus {
+  border-color: var(--origins-ember);
+  box-shadow: 0 0 0 3px rgba(201, 123, 79, 0.15);
+}
+
+.field-serif {
+  font-family: var(--font-serif);
+  font-size: 0.9375rem;
+  line-height: 1.55;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center gap-2 font-medium transition-all;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  padding: 0.6em 1.2em;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  line-height: 1;
+  letter-spacing: -0.005em;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 font-medium transition-all disabled:opacity-60;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  padding: 0.6em 1.2em;
+  border-radius: 6px;
+  border: 1px solid var(--origins-ember);
+  line-height: 1;
+  letter-spacing: -0.005em;
+  color: #fff;
+  background-color: var(--origins-ember);
+  box-shadow: 0 1px 2px rgba(58, 42, 31, 0.08);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--origins-ember-deep);
+  border-color: var(--origins-ember-deep);
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 font-medium transition-all disabled:opacity-60;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  padding: 0.6em 1.2em;
+  border-radius: 6px;
+  border: 1px solid var(--origins-edge);
+  line-height: 1;
+  letter-spacing: -0.005em;
+  background-color: var(--origins-paper);
+  color: var(--origins-ink);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: var(--origins-paper-deep);
+  border-color: var(--origins-ink-muted);
+}
+
+.btn-ghost {
+  @apply inline-flex items-center justify-center gap-2 font-medium transition-all disabled:opacity-60;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  padding: 0.6em 1.2em;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  line-height: 1;
+  letter-spacing: -0.005em;
+  background: transparent;
+  color: var(--origins-ink-soft);
+}
+
+.btn-ghost:hover:not(:disabled) {
+  background-color: var(--origins-paper-deep);
+  color: var(--origins-ink);
+}
+
+.btn-danger {
+  @apply inline-flex items-center justify-center gap-2 font-medium transition-all disabled:opacity-60;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  padding: 0.6em 1.2em;
+  border-radius: 6px;
+  border: 1px solid var(--origins-rose);
+  line-height: 1;
+  letter-spacing: -0.005em;
+  color: #fff;
+  background-color: var(--origins-rose);
+}
+
+.page-shell {
+  @apply mx-auto w-full max-w-[1100px] px-8 pb-16 pt-10;
+}
+
+.page-narrow {
+  @apply mx-auto w-full max-w-[720px] px-8 pb-16 pt-8;
+}
+
+.page-interview {
+  @apply mx-auto w-full max-w-[640px] px-8 pb-16 pt-12;
+}
